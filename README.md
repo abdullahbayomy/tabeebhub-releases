@@ -12,15 +12,39 @@ Official installer downloads for **TabeebHub**, clinic management software.
 
 **[⬇ Download TabeebHub for Windows](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-Setup.exe)**
 
-Windows 10 or Windows 11, 64-bit. Roughly 91 MB.
+Windows 10 or Windows 11, 64-bit. About 91 MB.
 
-This link always serves the newest version — it does not need updating when a new release ships.
+### macOS
+
+**[⬇ Download TabeebHub for Mac — Apple Silicon](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-arm64.dmg)**
+
+For Macs with an M1, M2, M3 or M4 chip. About 115 MB.
+
+**[⬇ Download TabeebHub for Mac — Intel](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-x64.dmg)**
+
+For older Macs with an Intel processor. About 120 MB.
+
+> **Not sure which Mac you have?** Click the  menu in the top-left corner of your
+> screen and choose **About This Mac**. If it says *Apple M1/M2/M3/M4*, choose Apple
+> Silicon. If it says *Intel*, choose Intel.
+
+These links always serve the newest version — they do not change when we release an update.
+
+---
+
+## Installing on macOS
+
+1. Open the downloaded `.dmg` file.
+2. Drag the **TabeebHub** icon onto the **Applications** folder shown beside it.
+3. Open TabeebHub from your Applications folder or Launchpad.
+
+That's it. TabeebHub is notarized by Apple, so macOS will not show a security warning.
 
 ---
 
 ## Installing on Windows
 
-1. Click the download link above and wait for the file to finish downloading.
+1. Click the Windows download link above and wait for the file to finish downloading.
 2. Open **TabeebHub-Setup.exe**.
 3. **Windows will show a blue warning screen.** This is expected — see below.
 4. Choose the install location (or accept the default) and click **Install**.
@@ -46,7 +70,7 @@ the checksum below — it lets them confirm the file is exactly the one we publi
 
 ## Verifying the download (for IT administrators)
 
-Every release includes a `SHA256SUMS.txt` file listing the expected hash.
+Every release includes a `SHA256SUMS.txt` file listing the expected hash for each file.
 
 **Windows (PowerShell):**
 
@@ -54,14 +78,23 @@ Every release includes a `SHA256SUMS.txt` file listing the expected hash.
 Get-FileHash .\TabeebHub-Setup.exe -Algorithm SHA256
 ```
 
-**macOS / Linux:**
+**macOS:**
 
 ```bash
-shasum -a 256 TabeebHub-Setup.exe
+shasum -a 256 TabeebHub-arm64.dmg
 ```
 
-Compare the result against `SHA256SUMS.txt` on the [latest release page](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest).
+Compare the result against `SHA256SUMS.txt` on the
+[latest release page](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest).
 If they match, the file is byte-for-byte what we published.
+
+The macOS builds are additionally signed with an Apple Developer ID certificate and
+notarized by Apple. You can confirm this yourself:
+
+```bash
+spctl --assess --type execute --verbose=4 /Applications/TabeebHub.app
+# expected: accepted   source=Notarized Developer ID
+```
 
 ---
 
