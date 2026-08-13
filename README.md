@@ -32,6 +32,17 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
+## Known issue in the current release
+
+**The app may return you to the login screen after being left open for a long
+time.** Your sign-in lasts 7 days and the desktop app does not renew it
+automatically, so once it lapses the next click logs you out — and the screen may
+flicker between pages until you quit and reopen the app.
+
+Signing in again clears it. Your data is never affected. A fix is in progress.
+
+---
+
 ## Installing on macOS
 
 1. Open the downloaded `.dmg` file.
