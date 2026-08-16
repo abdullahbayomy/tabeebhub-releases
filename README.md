@@ -32,14 +32,18 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## Known issue in the current release
+## Fixed in 1.0.4 — being returned to the login screen
 
-**The app may return you to the login screen after being left open for a long
-time.** Your sign-in lasts 7 days and the desktop app does not renew it
-automatically, so once it lapses the next click logs you out — and the screen may
-flicker between pages until you quit and reopen the app.
+Earlier releases could send you back to the login screen while you were working:
+after the app had been left open for a long time, after the machine woke from
+sleep, or simply after the app was reloaded. Nothing had actually rejected your
+sign-in, and on some occasions signing in again did not hold.
 
-Signing in again clears it. Your data is never affected. A fix is in progress.
+**This is fixed in 1.0.4.** Sessions now renew on their own, a brief network
+problem no longer ends one, and your sign-in survives a reload and a restart.
+
+If you are running an older version, update using the links above. Your data was
+never affected by any of this.
 
 ---
 
