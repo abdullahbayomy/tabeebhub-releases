@@ -32,6 +32,28 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
+## What's new in 1.0.5
+
+**Reception can now close out a visit.** The front desk gets a checkout on the
+appointment screen: what the visit came to, the procedures and services it was
+for, the payment — full or partial — and the next booking. All of it without
+opening the clinical workspace, which stays with the doctor.
+
+**Services keep up with the doctor.** When the doctor adds a service or marks a
+session used, the front desk sees it straight away, with the session that was
+just completed called out. A finished course stays on screen instead of
+disappearing mid-checkout, and a service bought more than once is now
+distinguishable by when it was started.
+
+**From this version the app updates itself.** New releases download in the
+background and install when you quit — no more downloading an installer.
+
+> Updating **from 1.0.4 or earlier** still needs a one-time manual download using
+> the links above. Those versions have no updater in them; 1.0.5 is the first
+> that can update on its own.
+
+---
+
 ## Fixed in 1.0.4 — being returned to the login screen
 
 Earlier releases could send you back to the login screen while you were working:
