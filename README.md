@@ -32,9 +32,38 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.5
+## What's new in 1.0.6
 
-**Reception can now close out a visit.** The front desk gets a checkout on the
+**Book a course of visits in one go.** A patient attending three days a week no
+longer means filling in the New Appointment form a dozen times. Pick the days on
+a calendar — or generate them from a weekday pattern, "every Sunday and Tuesday
+for four weeks" — and book the whole course at once. It is available from the
+appointments page, the front-desk checkout, and the doctor's Complete Visit
+dialog. Each date reports its own result, so if a day was already booked or a
+prepaid course ran out of sessions, you are told which days were skipped and
+why, rather than finding out later.
+
+**Your monthly plan is applied while you choose the days.** The picker stops at
+whatever your appointment allowance has left, instead of accepting twelve days
+and quietly booking four. Completing a visit is never blocked by this — only
+booking.
+
+**Prepaid sessions read plainly.** "3 of 4 sessions left" is now
+"1 completed · 3 remaining", everywhere a prepaid service appears.
+
+**The Appointments list no longer flickers.** Booking a visit for a future date
+briefly showed it under Today before it jumped to Upcoming. It now goes straight
+to Upcoming, and the confirmation no longer says the patient was added to
+today's queue when they were not.
+
+> **Nothing to download.** If you are on 1.0.5, this update installs itself —
+> it downloads in the background and applies when you next quit the app.
+
+---
+
+## Previously, in 1.0.5
+
+**Reception can close out a visit.** The front desk gets a checkout on the
 appointment screen: what the visit came to, the procedures and services it was
 for, the payment — full or partial — and the next booking. All of it without
 opening the clinical workspace, which stays with the doctor.
