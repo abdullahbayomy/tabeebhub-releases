@@ -32,7 +32,35 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.6
+## What's new in 1.0.7
+
+**You choose which files a patient can see.** Every file attached to a visit
+used to appear in the patient's records automatically. Now each one is marked
+**Private** or **Shared**, and the label sits on the file itself, so a glance at
+the visit tells you what the patient can open.
+
+New files start **Private**. Sharing one asks you to confirm; making a file
+private again is immediate and never asks. That is deliberate — un-sharing takes
+a file out of the patient's list, but if they have already opened the link it may
+keep working for them, so sharing is the step worth pausing on.
+
+You can change this at any time, including long after the visit is finished.
+Only doctors can share or un-share a file; assistants can still attach them.
+
+**New procedures and medicines show up straight away.** Adding a procedure or a
+medicine and going back to an open visit used to leave it missing from the list
+until the app was reloaded. It appears immediately now.
+
+**A small display fix.** Patients who chose not to state their gender showed a
+line of internal text on the patient list and profile. It now reads correctly, in
+both English and Arabic.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself — it downloads in the background and applies when you next quit the app.
+
+---
+
+## Previously, in 1.0.6
 
 **Book a course of visits in one go.** A patient attending three days a week no
 longer means filling in the New Appointment form a dozen times. Pick the days on
@@ -55,9 +83,6 @@ booking.
 briefly showed it under Today before it jumped to Upcoming. It now goes straight
 to Upcoming, and the confirmation no longer says the patient was added to
 today's queue when they were not.
-
-> **Nothing to download.** If you are on 1.0.5, this update installs itself —
-> it downloads in the background and applies when you next quit the app.
 
 ---
 
