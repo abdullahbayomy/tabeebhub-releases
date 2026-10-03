@@ -12,17 +12,17 @@ Official installer downloads for **TabeebHub**, clinic management software.
 
 **[⬇ Download TabeebHub for Windows](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-Setup.exe)**
 
-Windows 10 or Windows 11, 64-bit. About 92 MB.
+Windows 10 or Windows 11, 64-bit. About 95 MB.
 
 ### macOS
 
 **[⬇ Download TabeebHub for Mac — Apple Silicon](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-arm64.dmg)**
 
-For Macs with an M1, M2, M3 or M4 chip. About 116 MB.
+For Macs with an M1, M2, M3 or M4 chip. About 120 MB.
 
 **[⬇ Download TabeebHub for Mac — Intel](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-x64.dmg)**
 
-For older Macs with an Intel processor. About 122 MB.
+For older Macs with an Intel processor. About 126 MB.
 
 > **Not sure which Mac you have?** Click the  menu in the top-left corner of your
 > screen and choose **About This Mac**. If it says *Apple M1/M2/M3/M4*, choose Apple
@@ -32,7 +32,299 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.8
+## What's new in 1.0.9
+
+This update brings the desktop app everything the web app gained between
+16 September and 3 October, so the two match again. The first section is for
+practices with more than one clinic. If you run one clinic, skip it; everything
+after it applies to you.
+
+### Several clinics in one account
+
+**Show one clinic, or all of them.** A clinic chooser now sits in the top bar,
+beside the page title. On pages that list things it reads *Showing:*. Pick one
+clinic or **All clinics**. Today, Appointments, Prescriptions and the Cash
+Register follow your choice, and Patients, Receivables, Invoices, Revenue,
+Patient Insights, Performance, Staff Performance, Services, Procedures and
+Inventory show one section per clinic, each row marked with its clinic. A
+record always opens at its own clinic. Settings pages read *Editing:* and
+change one clinic at a time. If you switch clinics with unsaved changes, the
+app asks first.
+
+**Amounts in different currencies are never added together.** Each currency
+gets its own total. A patient who owes at two clinics has a separate balance at
+each, and each one is collected at the clinic it is owed to.
+
+**Give each clinic a short name.** With more than one clinic you are asked for a
+short name such as *Dokki*. Lists and queue numbers then read *Dokki·7*, so
+rows from two clinics never look the same. You can change it in Clinic
+Settings.
+
+**Bookings and new patients say which clinic.** New Appointment and Add Patient
+show which clinic the booking or record is for. If the patient you pick is
+registered at another of your clinics, you choose: book them where they are
+already known, or add them here as a new patient. A patient record shows
+*Also at:* with a link to the same person at your other clinic. Each clinic
+keeps its own name, number and balance for the patient.
+
+**Today follows you between clinics.** A doctor who works at several clinics
+sees *In your room* at the top of Today: every visit they have open, at any
+clinic. *Next for you* shows who is waiting for you, and an *Also today* line
+shows what is waiting at your other clinics, with a button to show that clinic.
+Owners see one *Collected today* line per currency, added up across the clinics
+they own. Today's shortcuts and the drawer button point at the clinic you are
+working at, and you can change that from the shortcuts.
+
+**Visits left open are caught.** A visit open for two hours or more, or since an
+earlier day, moves to *Still in your room?*. From there you can **Complete
+visit**, say **Still with patient** (it asks again later), or **Complete all**
+for patients who have left. Completing from here collects nothing. Whatever the
+patient owes stays on their account at that clinic. If a prescription with
+medicines was written, completing the visit finalizes it.
+
+**One cash drawer per clinic.** The Cash Register page lists *My drawers*. Each
+clinic's drawer is opened, counted and closed on its own and never added to
+another. The top bar says *Register open at Dokki*, and every collect form shows
+which clinic the money is for.
+
+**Staff who work at more than one clinic.** On the Staff page, **Works at**
+lets you tick every clinic a person works at. They use one staff seat, however
+many clinics you tick.
+
+**Notifications show which clinic they are about**, with a small clinic tag
+beside the time.
+
+### Paying doctors and assistants
+
+**A Compensation page for owners**, under Money. Set up a pay agreement for
+each doctor or assistant. A doctor's pay can be a monthly salary, a percentage
+of the cash collected on their visits or of what they billed, a fixed amount
+per visit, a guaranteed monthly minimum, or a mix of these. Assistants are paid
+a monthly salary. The page works out what each person earned month by month,
+line by line, and what you still owe them.
+
+Close a month to freeze it as a statement. Record the payments and advances you
+hand over, including anything withheld, the payment method and a reference.
+Recording a payment never takes money from the cash drawer and never adds an
+expense. You can change someone's pay from a chosen date, end an agreement, or
+void a payment or statement with a reason. Every change stays in the history.
+
+**Doctor pay counted once in your profit and loss.** When you set up your first
+pay agreement, it asks whether you already record doctor pay as a Salaries
+expense. If you do, compensation stays out of your P&L. If you don't, the P&L
+gets its own *Doctor compensation (earned)* line. You can change the answer
+later in Clinic Settings. Staff Performance also gets a Compensation tab.
+
+### Money reports
+
+**Every money page now uses the same rules.** Revenue, Staff Performance and
+Business Overview count cash on the day it was received, by your clinic's own
+day and time zone. *Billed* is after discounts and write-offs. *Owed to you now*
+is everything patients owe today. Pick the period at the top: Today, This
+month, Last month or any month.
+
+Until you dismiss it, a notice lists what may look different for past months.
+For example, money taken for a booking before the visit now counts as revenue
+on the day it was received. Expenses entered in another currency are listed on
+their own line instead of being subtracted. Nothing you recorded has changed.
+
+**On Staff Performance, "Collected on their visits" is now "Cash attributed".**
+Each doctor is credited with the payments received in the period on their own
+visits. Money that belongs to no one doctor is listed separately, below the
+doctors. The page now has Money and Clinical tabs. **If you pay a doctor a
+percentage of the old column, check past months before the next payout.** The
+old figure is still on the Clinical tab as *Collected on these visits to date*.
+The page reminds you too.
+
+**For owners of more than one clinic, Business Overview adds a *Right now*
+box**: package sessions paid for but not yet given, cash in open drawers, and
+credit patients hold. It also breaks payments down by method and expenses by
+category.
+
+**Revenue and Clinic Settings have an *On this page* index**, so you can jump
+straight to a section.
+
+### Bookings and payments
+
+**Create & collect now works for scheduled bookings, not only walk-ins.** You
+can take payment when you book ahead, in full or as a deposit. For a scheduled
+booking, *Just create appointment* stays the main button, so nothing is
+collected unless you choose to. The money is held as a prepayment until the
+visit starts. If the booking is cancelled, the money can be refunded or kept as
+the patient's credit.
+
+**Collect a prepayment later.** The page of an upcoming appointment has *Paid
+ahead?* with a **Collect prepayment** button, for a patient who paid by
+transfer, by card or with cash left at the desk.
+
+**Money held on a booking that is not going ahead** can now be **kept as the
+patient's credit** at your clinic, as well as refunded. Only a doctor or the
+owner can do either. Keeping it as credit takes nothing out of the drawer. If a
+booking now costs less than what was paid, the page explains what happens to
+the difference. Appointment rows show *Prepaid 300* or *Held 300*.
+
+**"Last session" on the appointments list.** When a visit uses the last session
+of a prepaid service, its row carries a *Last session* label. Hover over it to
+see *Session 6 of 6*. It is a good moment to offer a renewal while the patient
+is still at the clinic.
+
+**"Any doctor".** A booking with no doctor or assistant chosen now reads *Any
+doctor* or *Any assistant*, with a short line saying that anyone in that role
+at the clinic can take the patient.
+
+**Closing a colleague's visit.** When you complete a visit booked with another
+doctor, a tick box asks whether *I saw this patient*. Tick it and the visit and
+its money are credited to you. Leave it unticked if you are only closing the
+visit for them.
+
+**Add to the catalogue without leaving the form.** An empty service or procedure
+list no longer leaves you stuck. If your role may manage the list, you can add
+the first item right from the booking form, every picker links to where the
+list is managed, and an item you type can be added to the catalogue for next
+time. Search finds Arabic names whether they are typed with or without hamza,
+and with ه or ة, ي or ى.
+
+### Patients
+
+**Patient tags.** Label patients in your own words: VIP, Follow-up, Chronic or
+anything your team uses. A patient can have up to ten tags, in nine colours.
+You can add tags from the patient row, the patient record or the visit, and
+create a new tag on the spot by typing its name. A clinic with no tags yet gets
+five suggestions to start with. Filter the Patients list by tag, choosing *Has
+all* or *Has any*. Patient Insights filters by tag too and adds a Tags column
+to its table and CSV export.
+
+Everyone at the clinic can add and remove tags, but only the owner can rename,
+recolour or delete them, under Clinic setup → Patient tags. Tags are for staff
+only. Patients never see them, and they are never printed.
+
+**Correcting a date of birth shows what changed.** After you correct it from the
+visit, a short note says how many days it moved, how many growth measurements
+were re-scored and how many vaccine due dates were recalculated.
+
+### Growth charts for children
+
+**Record measurements on the Growth tab itself.** Each one is dated the day the
+child was measured, with an optional note. **Record history** copies in a whole
+growth card from home or from another clinic at once.
+
+**Nothing is overwritten.** You can correct a wrong value, and the old one is
+kept. Or you can withdraw it with a reason: it comes off the chart but stays in
+the record. The measurement record lists every entry, who recorded it and when.
+
+**The chart reads the trend, not just the latest point.** It says whether the
+child is staying on a centile or crossing centiles, across which measurements
+and by how much. A child sliding from the 50th to the 3rd centile is flagged
+even when each step looks small on its own. When there is only one measurement,
+the chart says it cannot show a trend yet. Each curve is labelled with its
+centile, and you can choose which set of centile lines to draw.
+
+**A second look before an unlikely value is saved**, such as a length lower than
+at the last visit or a jump far too big for the time between visits.
+
+### Veterinary clinics
+
+**Every animal patient has an animal record**: which animal it is (dog, cat or
+another), its breed, and whether it is neutered. You can also edit these from
+inside the visit. They belong to the patient, so a change shows everywhere.
+
+**Approximate age.** If nobody knows the birthday, enter roughly how old the
+animal is, in weeks, months or years. Its age then shows with a ~.
+
+**A vaccination card that follows the species**, with core and non-core
+vaccines for dogs and cats. A course is dated from its first dose, so a missing
+birthday doesn't stop the schedule.
+
+**Recent weights.** An animal's last five weights appear on its record, with the
+change since the previous one.
+
+### Clinic setup
+
+**Opening hours with two shifts.** A day can now have a morning and an evening
+shift with the clinic closed in between, instead of calling the gap a "break".
+**Apply to all open days** copies one day to the rest of the week, and
+Saturday–Thursday or Sunday–Thursday presets fill the week in one go. The
+editor shows which time zone the hours use. Suggested hours now say *nothing is
+saved yet*, and you can save them as they are.
+
+**New clinics start with opening hours.** A new clinic gets the usual hours
+(Saturday to Thursday, 09:00–17:00, Friday closed) instead of none. When you set
+up your first clinic, you see those hours and can confirm or change them. The
+setup also asks for the clinic's time zone, and it picks the currency from the
+clinic's phone number instead of your computer's language.
+
+**Changing the clinic's specialty explains itself.** Before you confirm, a
+dialog lists what will change, such as the form used for new visits and whether
+treatment plans are on. If a change can't be made from settings, you can send a
+request with your reason, and the reviewer's answer appears on the same screen.
+
+**Staff changes are on record.** If the person you add already uses TabeebHub
+elsewhere, they get an invitation and accept or decline it on their own screen.
+You can cancel an invitation that is still waiting. Owners also get a **Change
+history** on the Staff page that shows who added or removed whom, who changed a
+role and who reset a password, and when.
+
+**A shorter side menu.** Today's work stays at the top for every role, followed
+by Money and Services & stock. Reports and Clinic setup stay folded until you
+open them. A **Filter** box finds any page by name, in English or Arabic.
+Profile, Notifications and Security have moved under your avatar, and the top
+bar now shows the name of the page you are on. You may also see new menu rows
+(Online requests, Online consultations or Payments to confirm, Consultation
+balance, Public page and Online booking settings) and, for doctors who own
+their clinic, a line on Today about a public page. These belong to the new
+online booking and consultation features.
+
+**Focus mode now hides the side menu too**, and its shortcut, Ctrl/Cmd + \,
+works on every clinic screen.
+
+**Back goes back to Today.** If you open an appointment or a visit from Today,
+Back takes you to Today, not to the Appointments list.
+
+### Prescriptions
+
+**Share a prescription from the visit.** The visit's Prescription tab has
+Print, Download, Share and Full page buttons, and a completed visit has Rx,
+Print, Share and Empty Rx. Share copies a link or opens WhatsApp. For a child
+without a phone, WhatsApp goes to the parent, and the message names your
+clinic.
+
+**Print brings you back to where you started**: the visit, the appointment, the
+prescription or the prescriptions list.
+
+### Plan and add-ons
+
+**Each add-on now lasts a fixed number of days.** A top-up such as +100
+appointments lasts the number of days stated on it, counted from the day you buy
+it, whatever your renewal date. The monthly reset no longer touches it. Your
+plan's own allowance is used first. Anything unused when the add-on ends is
+lost. Billing shows how many extra you have and until when, for example *+100
+extra until 30 Oct*.
+
+### Faster, and always up to date
+
+**Pages open faster and ask the server for less.**
+
+**What you see stays current.** When something changes on another computer, on
+a phone or on another page, the screens that show it update by themselves,
+with no reload. Pages you leave open no longer keep checking the server in the
+background.
+
+### Fixed
+
+- A doctor you have just added now appears in the *Assigned Doctor* list
+  straight away, and a doctor you removed disappears from it, with no reload.
+- The *previous balance* offered when completing a visit now matches the balance
+  shown beside it.
+- If your session was ended from another device, you now see the sign-in screen
+  instead of a loading screen that never finishes.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.8
 
 This is the largest update the desktop app has had. It carries everything the
 web app gained between 23 August and 16 September, so the two now match again.
@@ -428,28 +720,6 @@ booking.
 briefly showed it under Today before it jumped to Upcoming. It now goes straight
 to Upcoming, and the confirmation no longer says the patient was added to
 today's queue when they were not.
-
----
-
-## Previously, in 1.0.5
-
-**Reception can close out a visit.** The front desk gets a checkout on the
-appointment screen: what the visit came to, the procedures and services it was
-for, the payment — full or partial — and the next booking. All of it without
-opening the clinical workspace, which stays with the doctor.
-
-**Services keep up with the doctor.** When the doctor adds a service or marks a
-session used, the front desk sees it straight away, with the session that was
-just completed called out. A finished course stays on screen instead of
-disappearing mid-checkout, and a service bought more than once is now
-distinguishable by when it was started.
-
-**From this version the app updates itself.** New releases download in the
-background and install when you quit — no more downloading an installer.
-
-> Updating **from 1.0.4 or earlier** still needs a one-time manual download using
-> the links above. Those versions have no updater in them; 1.0.5 is the first
-> that can update on its own.
 
 ---
 
