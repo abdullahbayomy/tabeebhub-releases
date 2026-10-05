@@ -32,7 +32,62 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.9
+## What's new in 1.0.10
+
+This update brings the desktop app everything the web app gained since 1.0.9,
+including fixes for three problems clinics reported.
+
+### Live updates that stay live
+
+- **Today comes back to Live on its own.** After you signed in, Today could
+  read *Connecting…* and show no new patients until the app was reloaded. Live
+  updates now connect as soon as you sign in, and come back by themselves after
+  a server update or a dropped connection.
+- **Nothing goes stale while the connection is down.** Today, Appointments,
+  Completed visits and the money pages keep refreshing on their own until live
+  updates are back.
+- **The badge says what is happening:** *Live*, *Connecting…*, *Reconnecting…*
+  or *Not live*.
+
+### The language button
+
+- **Switching between English and Arabic keeps you exactly where you were:**
+  the same page, tab, filters and clinic. It used to drop them, and on a
+  patient's Financial tab the page could freeze.
+- **It never hangs.** If the other language is slow to load, the page simply
+  opens again in the new language.
+- **A patient link that does not say which clinic** now asks *Which clinic's
+  record?* instead of loading forever.
+
+### Several clinics
+
+- **Online consultations work across your clinics.** Under *All clinics* the
+  list shows every clinic's consultations, each marked with its clinic.
+  Consultation settings have their own page with an *Editing:* control, and
+  the owner can move where consultations are recorded with *Move here*.
+  Money for a consultation always lands at the clinic it belongs to.
+- **Every page that shows a clinic's data has the right control:** *Showing:*
+  on lists and reports, *Editing:* on settings. If you run one clinic, nothing
+  changes.
+
+### Faster
+
+- **Pages make no more requests than they need**, and the patient page loads
+  fewer.
+
+### Fixed
+
+- The vaccination card's summary no longer squeezes into one word per line.
+- The account menu closes when you click anywhere else on the page.
+- Switching language on a print page no longer opens the print dialog a second time.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.9
 
 This update brings the desktop app everything the web app gained between
 16 September and 3 October, so the two match again. The first section is for
@@ -694,32 +749,6 @@ both English and Arabic.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself — it downloads in the background and applies when you next quit the app.
-
----
-
-## Previously, in 1.0.6
-
-**Book a course of visits in one go.** A patient attending three days a week no
-longer means filling in the New Appointment form a dozen times. Pick the days on
-a calendar — or generate them from a weekday pattern, "every Sunday and Tuesday
-for four weeks" — and book the whole course at once. It is available from the
-appointments page, the front-desk checkout, and the doctor's Complete Visit
-dialog. Each date reports its own result, so if a day was already booked or a
-prepaid course ran out of sessions, you are told which days were skipped and
-why, rather than finding out later.
-
-**Your monthly plan is applied while you choose the days.** The picker stops at
-whatever your appointment allowance has left, instead of accepting twelve days
-and quietly booking four. Completing a visit is never blocked by this — only
-booking.
-
-**Prepaid sessions read plainly.** "3 of 4 sessions left" is now
-"1 completed · 3 remaining", everywhere a prepaid service appears.
-
-**The Appointments list no longer flickers.** Booking a visit for a future date
-briefly showed it under Today before it jumped to Upcoming. It now goes straight
-to Upcoming, and the confirmation no longer says the patient was added to
-today's queue when they were not.
 
 ---
 
