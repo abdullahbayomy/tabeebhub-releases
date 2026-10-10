@@ -12,17 +12,17 @@ Official installer downloads for **TabeebHub**, clinic management software.
 
 **[⬇ Download TabeebHub for Windows](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-Setup.exe)**
 
-Windows 10 or Windows 11, 64-bit. About 95 MB.
+Windows 10 or Windows 11, 64-bit. About 96 MB.
 
 ### macOS
 
 **[⬇ Download TabeebHub for Mac — Apple Silicon](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-arm64.dmg)**
 
-For Macs with an M1, M2, M3 or M4 chip. About 120 MB.
+For Macs with an M1, M2, M3 or M4 chip. About 121 MB.
 
 **[⬇ Download TabeebHub for Mac — Intel](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-x64.dmg)**
 
-For older Macs with an Intel processor. About 126 MB.
+For older Macs with an Intel processor. About 127 MB.
 
 > **Not sure which Mac you have?** Click the  menu in the top-left corner of your
 > screen and choose **About This Mac**. If it says *Apple M1/M2/M3/M4*, choose Apple
@@ -32,7 +32,240 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.10
+## What's new in 1.0.11
+
+This update brings the desktop app the new features and fixes the web app
+gained since 1.0.10.
+
+### Dental clinics
+
+- **Mark a tooth "In progress".** For treatment that takes several visits,
+  such as a root canal, select the tooth on the Dental Chart during a visit
+  and press **Mark in progress**. The tooth keeps its condition colour, its
+  number is shown in a solid pill with a small half-filled circle on the
+  tooth, and a line above the chart reads *In progress: 16, 36*. Every later
+  visit opens with those teeth already marked. You can add a note, such as
+  *next: obturation*.
+- **Finish or stop it when the work is done.** **Mark done** can record the
+  result, such as Filling, Root canal or Crown, in the same click, or leave
+  the chart as it is. **Stop treatment…** ends it and keeps it in the tooth's
+  history, or removes it if it was set by mistake. Complete visit lists the
+  teeth still in progress and lets you mark them done there, but never stops
+  you completing. The patient's Dental tab shows the same, read-only.
+- **Charge a procedure per tooth.** In the procedure editor, each procedure
+  is now **Charged per: Procedure** or **Tooth**. Added to three teeth on the
+  Dental Chart, a per-tooth procedure is billed three times and uses its
+  materials three times; a per-procedure one is billed once (*Billed once for
+  3 teeth*). Existing procedures and visits already recorded don't change.
+  The owner sees a banner listing the procedures whose description says "per
+  tooth", so they can switch them in one step.
+- **Set the price on the Dental Chart.** Doctors and owners can type a price
+  for this visit, or a price per tooth, when adding a procedure from the
+  chart, as they already could on the visit's Overview. The procedure's own
+  price never changes.
+
+### Materials a visit used
+
+- **Record what was really used.** In a clinic that keeps inventory, the
+  visit's procedures card is now **Procedures & materials**. Each procedure
+  still takes its default materials off stock. Open **Materials** on its row
+  to record what this visit actually used: more, less, *Not used*, or another
+  item from stock. Then press **Save materials**. The procedure's default
+  materials never change, so the next patient starts from them again.
+- **+ Other material** records what belongs to no procedure, such as an
+  extra pack of gloves.
+- **On the Dental Chart** you can adjust the materials before pressing **Add
+  to visit**, so stock moves once, by exactly what is on screen.
+- **Removing a procedure** now asks first and says what will happen: its
+  charge is cancelled and everything it used, including your changes, goes
+  back to stock.
+- **An item's stock history names the visit,** for example *Used · Filling ·
+  Ahmed Ali*, and opens it.
+- **Who can change materials:** the owner, a doctor or an assistant while the
+  visit is in progress; only the owner once the visit is completed or
+  cancelled. Reception adds procedures as before, without the materials
+  editor.
+- **If your clinic blocks stock from going below zero,** the message names
+  the item and how many are in stock. The owner can **Update stock** right
+  there, and the add is then tried again by itself.
+- The procedure editor now asks *Discard your changes?* before it closes
+  with unsaved changes.
+
+### Patients
+
+- **The clinic owner can delete a patient record:** a test, a duplicate or
+  one added by mistake. Use **⋯ → Delete patient** on the Patients list or on
+  the patient's page, and pick a reason. Deleting doesn't give back plan
+  usage: appointments already used still count. Visits, payments and
+  invoices stay in your records and reports. Plain upcoming appointments are
+  cancelled, without notifying anyone. If the patient isn't registered at
+  another clinic and doesn't use the patient app, the phone number is taken
+  off the record so you can use it for a new patient.
+- **Money and open work come first.** If the patient owes money, holds
+  credit, has a paid booking or an open visit, the dialog lists each one with
+  a button that takes you there, and the record can be deleted once they are
+  settled.
+- **Restore at any time.** **Undo** shows for 10 seconds after a delete
+  (**Restore** if appointments were cancelled), and a **Deleted (n)** link at
+  the end of the Patients header lists deleted patients. Restoring brings the
+  record back with its patient number and history. Its phone number comes
+  back too, unless another patient has taken it since. Appointments the
+  delete cancelled don't come back. Only the clinic owner sees Delete and
+  Restore.
+- **Adding a patient with a deleted patient's number** tells you so. The
+  owner can restore that record instead; other staff are asked to check with
+  the owner.
+
+### Prescriptions
+
+- **Print on your own prescription paper.** Print now has a small ▾ beside
+  it: **Full prescription** (still the default, unchanged), **On my
+  prescription paper** (or *On Dr. …'s prescription paper* for a colleague's
+  prescription), and **Prescription paper settings**. Paper printing
+  puts only the medicines, their instructions, the notes and the follow-up
+  date into the blank area of your pre-printed pad.
+- **Set it up once per doctor, per clinic, in about a minute.** Choose the
+  paper size, print a measuring sheet on one pad sheet, and type the two
+  numbers you read off it: where the printed header ends and where the footer
+  starts. Tick what your pad already shows, such as the doctor's name or a
+  line for the date. A long prescription continues on a second sheet without
+  splitting a medicine. If this computer prints slightly off, you can nudge
+  it by half a millimetre.
+- **Make it the default** if you like. Then anyone who presses Print on that
+  doctor's prescriptions at that clinic prints on the paper, and the button
+  reads **Print on Rx paper**. Doctors also find the setting on their
+  Profile.
+- **The desktop app opens the print window already set to the right paper
+  size** (A5 or A4).
+
+### Specialties
+
+- **Neurosurgery has its own chief complaint.** Neurosurgery clinics used to
+  get the general form. Complaints are now chips, such as low back pain,
+  sciatica, neck pain, headache and fits, with the side in one tap. The
+  questions for a complaint appear once you tick it. Warning signs that need
+  action the same day, such as saddle numbness, a thunderclap headache or a
+  head injury on blood thinners, turn red and are counted on the summary.
+  Diagnosis chips build the working diagnosis, the note writes itself in
+  English or Arabic, and Continue carries the problem into the next visit and
+  asks again about today.
+- **Veterinary: parasite control on the vaccination card.** Deworming and
+  flea & tick treatment for dogs and cats sit under a new **Parasite
+  control** heading. Choose the schedule (deworming every 2 weeks, monthly,
+  every 2 months or every 3 months; flea & tick monthly or every 12 weeks)
+  and the next date counts from the last dose. Nothing is chased until the
+  first dose is recorded. A young animal's first record opens on the
+  schedule for its age, and the row says so when the animal has outgrown it.
+- **Record dose has a search box.** On an animal's card it finds rows by the
+  words vets actually type, such as «تطعيم الديدان», «تطعيم الحشرات», worms or
+  fleas, and by brand names.
+
+### Several clinics
+
+If you run one clinic, only a few labels change here.
+
+- **"Working at" is the clinic you are at.** It is marked with a pin
+  wherever it appears. Your cash drawer, calls from your team and Today's
+  shortcuts use it. The *Showing:* menu has a new first choice, **Where I'm
+  working**, that follows it.
+- **The first time you open a practice with two or more clinics on this
+  computer,** the card on Today now asks *Where are you working?* and also
+  what your lists should show. Nothing is saved until you press **Done**.
+- **Clearer choices.** New Appointment and Add Patient mark your clinic
+  *You're here*. Moving to clinics where you work for another doctor is
+  labelled, for example *Switches to Dr. Y's clinics · you're a doctor
+  there*. Call staff names the clinic it calls.
+- **The short name is optional.** New Clinic no longer asks for a short name,
+  for the new clinic or any other. A line under the name shows how the clinic
+  will appear in lists, with **Change**. You can also clear a short name. The
+  amber "give each clinic a short name" banner is gone; a quiet hint appears
+  only when two of your clinics really look alike.
+- **New Clinic sets the currency and time zone from the clinic's phone
+  number.** It used to guess the currency from your computer's language and
+  leave every new clinic on Cairo time.
+
+### Cash register
+
+- **The register pill follows the screen.** The pill in the top bar shows the
+  drawer of the clinic the page shows, for example *Register closed ·
+  Dokki*, and opens it. Under *All clinics* it shows the drawer where you are
+  working, marked with the pin.
+- **Every drawer at once.** With *Showing: All clinics*, the Cash register
+  page opens with *Your drawers · 1 of 3 open*: one row per clinic, each in
+  its own currency, with **Open drawer** or **Count & close**. Drawers are
+  never added together.
+- **The owner can count and close a colleague's forgotten drawer.** Any
+  shortfall or surplus is recorded on that person's shift, and the sessions
+  list says *Closed by …*. Before, a forgotten drawer could only close
+  itself, uncounted, at the end of the clinic's day.
+- **Clearer words.** Your card says *Your drawer is closed* rather than
+  *Register closed*, so it no longer reads as if the clinic's whole till were
+  closed while a colleague's drawer is open. A line under it lists
+  colleagues' drawers open at the same clinic, for example *Also open here:
+  Sara since 09:05*.
+
+### Menu and names
+
+- **One name per screen,** the same in the menu and the page title:
+  *Revenue*, *Staff pay* (was Compensation), *Clinic performance* (was
+  Performance), *Prescriptions* (was Prescription Command Center), *My
+  clinics*, *Billing & subscription*. Today's *Schedule* shortcut is now
+  *Appointments*.
+- Owners have a menu row for **Online consultation settings** under Clinic
+  setup. **Patient tags** has moved to the end of Services & stock.
+- Only one menu row is highlighted at a time, and assistants no longer see a
+  count on *Payments to confirm*, which they can't confirm; the page says
+  *View only*.
+- Your Profile has a **Sign-in & security** card for every role. Its
+  *Previous session* shows your own last sign-in on this computer, never
+  someone else's on a shared computer.
+
+### Notifications
+
+- **Notifications in Arabic.** If you use the app in Arabic, notices that
+  still showed in English (cash checks, subscription and trial reminders,
+  payment problems, consultation case results) now read in Arabic, with
+  Arabic buttons. This includes notices already in your list, and the
+  summary cards on the Notifications page.
+- **Clearer cash notices.** *Yesterday's cash needs a look* now names the
+  days the check covers, for example *Cash from the last 2 days needs a
+  look*, and counts read *1 drawer*, not *1 drawer(s)*. *Your books balance
+  again* now reads *Nothing needs a look now*.
+- **An empty bell says what it will show you,** depending on your role: for
+  example a patient booked, checked in or ready for you, or a visit ready to
+  collect.
+
+### Staying signed in and up to date
+
+- **A dropped connection no longer signs you out.** If the internet drops,
+  or the server is restarting for an update, when your session needs
+  renewing, the app keeps you signed in and keeps trying until it gets
+  through. Only a sign-in the server actually refuses ends your session.
+- **More money pages refresh on their own while live updates are down:**
+  Business overview, Profit and loss, and the Revenue page's Collections
+  panel.
+
+### Fixed
+
+- **The alert sound now plays in the desktop app,** for new notifications
+  and when a doctor calls staff. The sound was missing from the app, so it
+  stayed silent. You can turn it off with *Alert sounds* in the
+  notifications panel.
+- Reception's full prescription printout now shows each medicine's
+  instructions and notes, instead of a dash.
+- The full prescription now waits for its QR code before printing, so the
+  code no longer prints as an empty box.
+- Staff pay accepts Arabic digits in percentages and in the withholding note.
+- In Arabic, the New Clinic dialog's messages about the name, address,
+  specialty and currency are now in Arabic, not English.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.10
 
 This update brings the desktop app everything the web app gained since 1.0.9,
 including fixes for three problems clinics reported.
@@ -718,34 +951,6 @@ Basic Information in Clinic Settings.
   Revenue page refresh instead of showing the old figures.
 - Closing the register with a blank or negative counted amount is refused
   rather than recorded as 0.
-
-> **Nothing to download.** If you are on 1.0.5 or later, this update installs
-> itself — it downloads in the background and applies when you next quit the app.
-
----
-
-## Previously, in 1.0.7
-
-**You choose which files a patient can see.** Every file attached to a visit
-used to appear in the patient's records automatically. Now each one is marked
-**Private** or **Shared**, and the label sits on the file itself, so a glance at
-the visit tells you what the patient can open.
-
-New files start **Private**. Sharing one asks you to confirm; making a file
-private again is immediate and never asks. That is deliberate — un-sharing takes
-a file out of the patient's list, but if they have already opened the link it may
-keep working for them, so sharing is the step worth pausing on.
-
-You can change this at any time, including long after the visit is finished.
-Only doctors can share or un-share a file; assistants can still attach them.
-
-**New procedures and medicines show up straight away.** Adding a procedure or a
-medicine and going back to an open visit used to leave it missing from the list
-until the app was reloaded. It appears immediately now.
-
-**A small display fix.** Patients who chose not to state their gender showed a
-line of internal text on the patient list and profile. It now reads correctly, in
-both English and Arabic.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself — it downloads in the background and applies when you next quit the app.
