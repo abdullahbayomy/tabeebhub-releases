@@ -18,11 +18,11 @@ Windows 10 or Windows 11, 64-bit. About 96 MB.
 
 **[⬇ Download TabeebHub for Mac — Apple Silicon](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-arm64.dmg)**
 
-For Macs with an M1, M2, M3 or M4 chip. About 121 MB.
+For Macs with an M1, M2, M3 or M4 chip. About 122 MB.
 
 **[⬇ Download TabeebHub for Mac — Intel](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-x64.dmg)**
 
-For older Macs with an Intel processor. About 127 MB.
+For older Macs with an Intel processor. About 128 MB.
 
 > **Not sure which Mac you have?** Click the  menu in the top-left corner of your
 > screen and choose **About This Mac**. If it says *Apple M1/M2/M3/M4*, choose Apple
@@ -32,7 +32,136 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.13
+## What's new in 1.0.14
+
+This update brings the desktop app the new features and fixes the web app
+gained since 1.0.13: root canal records in the Dental Chart, a 12-hour or
+24-hour choice for the times your patients see, and a simpler billing page.
+
+### Root canal records in the Dental Chart
+
+A tooth with a root canal treatment in progress now has a root canal card
+where you record each canal, instead of a free-text note.
+
+- **Record canals.** The card lists the usual canals for that tooth, grouped
+  under their root, and suggests the one that is often missed (such as a
+  second MB canal) without ever assuming it. Type the working length of each
+  canal one after another, and the final file size as *25/.06* or *F2*
+  (**Same for all** gives every canal the same size). **+ Add canal** adds
+  one more.
+- **Two short dialogs.** **Dress & seal…** records the dressing and the
+  temporary for a treatment that continues. **Fill canals…** records the
+  technique, sealer and cones on the last visit, then **Fill & mark done
+  (chart: Root canal)** or **Fill only**.
+- **Every visit picks up where the last one stopped.** The next visit opens
+  on the last values, with a *Visit log* that shows one line per visit and
+  only what changed. The chart marks a tooth with a root canal in progress
+  with an **RCT** tag.
+- **Retreatment and children.** A tooth that already had a root canal opens
+  as a **Retreatment**, with the previous filling and the old lengths beside
+  the new ones. Baby teeth get a **Pulpectomy** card.
+- **Mistakes are easy to undo.** A root canal marked done by accident is
+  reopened with **Undo done to change it** in the message that appears, or
+  **Undo done** in the tooth's history. You can still record on a completed
+  visit until the end of that clinic day.
+- **Saving.** Changes are saved when you leave the tooth or the tab, or when
+  you complete the visit. If someone else saved the same tooth first, their
+  changes are kept and you are asked only about the fields you both changed.
+
+**Print a root canal record.** **Print record**, on the root canal card and on
+each record in the tooth's history, opens a one-page sheet, *Root canal record
+— tooth 36*, for referrals and the patient's file. It has your clinic's
+letterhead, the patient, the tooth, the treatment, the doctor and dates, a
+table of the final canals (length, file size, cone, state and any
+complication) and the visit log. Press **Print**.
+
+**Finished treatments keep their last note.** A treatment marked done or
+stopped used to lose its *Next* note from the tooth's history. The history now
+shows it as *Last note: …* under the result, on the visit's chart and on the
+patient profile.
+
+### 12-hour or 24-hour times for your patients
+
+**Online booking settings** and **Online consultation settings** each have a
+new choice, **Time format for patients**: **12-hour** or **24-hour**. It
+changes only how times are written for patients: the times they pick from
+when booking, their booking and consultation pages, and their appointment
+pages for online bookings and consultations. Your hours, available times and bookings stay exactly the same.
+Every clinic starts on 24-hour, as before, until you change it.
+
+### Plans and billing
+
+- **New plans:** **Free**, **1 Clinic**, **3 Clinics** and **9 Clinics**. Paid
+  plans give unlimited visits, and prescriptions are unlimited on every plan,
+  Free included. Some plans let you add extra clinics or extra staff members
+  on top.
+- **The billing page leads with *Your plan*:** your plan, what your next
+  renewal costs line by line, the dates, and how much of each limit you use.
+  **Renew**, **Change plan** and **Upgrade** are right there.
+- **Buy one more clinic or staff seat.** When you reach your clinic or staff
+  limit, on **My clinics**, **Staff**, the limit message or the billing page,
+  you can add one more to the plan you have, if your plan offers extras, next
+  to the cheapest upgrade.
+  You pay now only for the days left in your current period; after that it is
+  part of your renewal. Close to your renewal date, you get **Renew with 1 more
+  staff member** (or clinic) instead. Only the clinic owner can buy; staff see
+  *Ask the clinic owner to add a seat*.
+- **"All in use" instead of a red "Full".** Using every clinic or staff seat
+  your plan includes is normal, so it now reads **All in use**, in a calm
+  colour. It turns red only when you are over a limit.
+- **The Free plan now includes 2 staff members** (you, the owner, don't
+  count). If you already have more on Free, nobody loses access.
+
+### Your clinic's location
+
+Clinic settings, clinic setup and **Create clinic** now have a **Where
+patients find you** card, with your city, governorate and a **Location on
+the map** section. Patients on your public
+page get directions to your exact map pin once you have confirmed it, or to
+your written address when there is no pin. In this version of the desktop
+app, the pin itself is set on tabeeb-hub.com or in the TabeebHub phone app;
+the desktop app shows the pin you set there, opens it with **Open in Google
+Maps**, and can **Remove** it.
+
+### Smaller changes
+
+- **Credential documents each have their own place.** When you send your
+  documents for verification, each one (for example a licence and a degree)
+  has its own slot under *Your documents*. Files already sent stay attached,
+  and **Replace** changes only that one.
+- **Announcements in your language.** TabeebHub announcements are shown in
+  English or Arabic, matching your app's language when both are written,
+  with phone numbers written and linked correctly.
+- **Attachments: up to 10 MB each, judged after the photo is shrunk.** A large
+  photo is made smaller first, so most camera photos still upload. A PDF or
+  photo that is still over 10 MB gets a clear *too large* message.
+
+### Also
+
+- The sign-up page now scrolls in the desktop app, so the **Create** button
+  is always reachable. Its last step is shorter, with **Edit** to change your
+  account details.
+- A sharper TabeebHub app icon (the same design, redrawn), and a purple
+  loading spinner while the app starts.
+- Image attachments can be opened with **Open full size**.
+
+### For TabeebHub admins
+
+- **Admin → Payments** lists every payment made into TabeebHub, including
+  **Declined** ones.
+- **Admin → Subscriptions** sorts by closest to the limit, marks accounts
+  with a **Near limit (80%+)** chip, and has **Move to Free** and **Set
+  extras**.
+- Announcements can be written in English, Arabic or both, with a live
+  preview.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.13
 
 This update brings the desktop app the new features and fixes the web app
 gained since 1.0.12. Most of it is about one thing: not booking the same
@@ -478,61 +607,6 @@ If you run one clinic, only a few labels change here.
 - Staff pay accepts Arabic digits in percentages and in the withholding note.
 - In Arabic, the New Clinic dialog's messages about the name, address,
   specialty and currency are now in Arabic, not English.
-
-> **Nothing to download.** If you are on 1.0.5 or later, this update installs
-> itself. It downloads in the background and applies the next time you quit the
-> app. The download links at the top of this page have not changed.
-
----
-
-## Previously, in 1.0.10
-
-This update brings the desktop app everything the web app gained since 1.0.9,
-including fixes for three problems clinics reported.
-
-### Live updates that stay live
-
-- **Today comes back to Live on its own.** After you signed in, Today could
-  read *Connecting…* and show no new patients until the app was reloaded. Live
-  updates now connect as soon as you sign in, and come back by themselves after
-  a server update or a dropped connection.
-- **Nothing goes stale while the connection is down.** Today, Appointments,
-  Completed visits and the money pages keep refreshing on their own until live
-  updates are back.
-- **The badge says what is happening:** *Live*, *Connecting…*, *Reconnecting…*
-  or *Not live*.
-
-### The language button
-
-- **Switching between English and Arabic keeps you exactly where you were:**
-  the same page, tab, filters and clinic. It used to drop them, and on a
-  patient's Financial tab the page could freeze.
-- **It never hangs.** If the other language is slow to load, the page simply
-  opens again in the new language.
-- **A patient link that does not say which clinic** now asks *Which clinic's
-  record?* instead of loading forever.
-
-### Several clinics
-
-- **Online consultations work across your clinics.** Under *All clinics* the
-  list shows every clinic's consultations, each marked with its clinic.
-  Consultation settings have their own page with an *Editing:* control, and
-  the owner can move where consultations are recorded with *Move here*.
-  Money for a consultation always lands at the clinic it belongs to.
-- **Every page that shows a clinic's data has the right control:** *Showing:*
-  on lists and reports, *Editing:* on settings. If you run one clinic, nothing
-  changes.
-
-### Faster
-
-- **Pages make no more requests than they need**, and the patient page loads
-  fewer.
-
-### Fixed
-
-- The vaccination card's summary no longer squeezes into one word per line.
-- The account menu closes when you click anywhere else on the page.
-- Switching language on a print page no longer opens the print dialog a second time.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself. It downloads in the background and applies the next time you quit the
