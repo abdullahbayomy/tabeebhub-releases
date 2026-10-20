@@ -32,7 +32,57 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.15
+## What's new in 1.0.16
+
+This update brings the desktop app the WhatsApp changes the web app gained
+since 1.0.15: a patient who says no at the desk is remembered, and the
+reminder tag says who turned WhatsApp off.
+
+### A "no" at the desk is remembered
+
+- **Untick it, and it's recorded.** On the booking review step and in **Add
+  Patient**, the box *The patient agreed to WhatsApp reminders* still starts
+  ticked. If the patient doesn't want WhatsApp messages, untick it: that
+  "no" is now saved for their number.
+- **The next booking starts unticked.** When you book that patient again,
+  the box starts unticked, with *Declined WhatsApp reminders before. Tick
+  only if the patient agrees now.* Tick it only if they've changed their
+  mind; that records their agreement.
+- **A recorded "no" is never undone by mistake.** If you add a new patient
+  on a number that already declined and leave the box ticked, the number
+  stays off, and the app tells you so. A computer or phone still on an older
+  version can't switch it back on by leaving the box ticked either.
+- **Unticking doesn't cancel an agreement.** If a number already agreed,
+  unticking the box doesn't stop its reminders; the app says so, and you
+  can turn them off from the patient's WhatsApp card.
+- **One answer per phone number.** The answer belongs to the number, so
+  children booked on their mother's number share her answer.
+- A patient who turned WhatsApp off themselves, or replied **STOP**, stays
+  off as before. Only they can turn it back on, by replying **START**.
+
+### The reminder tag says who turned WhatsApp off
+
+On Today, the Appointments list and the appointment page, a booking whose
+patient declined at the desk now reads **Declined WhatsApp**. Point at it to
+see how to record a yes: on the patient's profile, or by ticking the box at
+their next booking. A patient who turned WhatsApp off themselves still reads
+**Turned WhatsApp off**.
+
+### Same-day reminders before 09:00
+
+No reminder is ever sent between 21:00 and 09:00. A same-day reminder whose
+time falls before 09:00 used to be skipped. It now goes at 09:00, as long as
+that is still at least 47 minutes before the appointment. For example, with
+**1 hour before**, a 09:50 appointment is reminded at 09:00. The
+**WhatsApp appointment reminders** card in **Clinic settings** says so.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.15
 
 This update brings the desktop app the new features and fixes the web app
 gained since 1.0.14: a colour for each doctor across the schedule, a warning
@@ -331,138 +381,6 @@ anything is saved.
 
 - **Google Calendar sync** is being tried with a small group of doctors
   first. We'll let you know when it is available to everyone.
-
-> **Nothing to download.** If you are on 1.0.5 or later, this update installs
-> itself. It downloads in the background and applies the next time you quit the
-> app. The download links at the top of this page have not changed.
-
----
-
-## Previously, in 1.0.12
-
-This update brings the desktop app the new features and fixes the web app
-gained since 1.0.11. Most of it is one new feature: WhatsApp appointment
-reminders.
-
-### WhatsApp appointment reminders
-
-TabeebHub switches WhatsApp reminders on, so they may not be available for
-your clinic yet. Until they are, Clinic Settings → Notifications shows them as
-*Coming soon*. What follows applies once they are available for your clinic.
-
-- **What the patient gets.** Before the appointment, a WhatsApp message sent
-  by TabeebHub on behalf of your clinic, with the clinic's name, the
-  appointment time and the number to call. It has three buttons: *I'll be
-  there*, *I need to change it* and *Stop reminders*. Reminders go only to
-  people who agreed to them for your clinic, and only to Egyptian mobile
-  numbers. When the patient has no Egyptian mobile of their own, the reminder
-  goes to a guardian linked at your clinic. An animal's reminder always goes
-  to its owner.
-- **When it goes.** The first reminder goes 12, 24 or 48 hours before the
-  appointment. An optional second one goes 1, 2 or 3 hours before, on the
-  day. Nothing is sent between 9 pm and 9 am clinic time: a first reminder
-  that would fall then moves to 20:30 or 9:00, if that still leaves time, and
-  a same-day reminder that would fall then is skipped. An appointment booked
-  after its reminder time still gets one, at least an hour after it was
-  booked, if there is still time.
-- **See where it stands.** When a reminder is on its way, the appointment
-  shows a small WhatsApp tag on the Today board and the Appointments list,
-  such as *Reminder delivered* or *Reminder read*, then *Confirmed on
-  WhatsApp* when the patient taps *I'll be there*. If the balance has run
-  out, it reads *Reminder waiting for credits*. For an upcoming appointment
-  that can't get a reminder, the tag says why, for example *No WhatsApp
-  consent* or *No WhatsApp number*. Hover over a tag for details. The lists
-  show the tag while the appointment is still booked; the appointment's own
-  page always shows it. Tags appear only at clinics that have reminders
-  switched on, and they update on their own.
-- **"Asked to reschedule."** When the patient taps *I need to change it*, the
-  tag reads *Asked to reschedule* and the clinic's staff get a notification,
-  *Change requested on WhatsApp*, that opens the appointment. The appointment
-  itself is never changed or cancelled: call the patient to agree a new time.
-- **Stop reminders.** A patient who taps *Stop reminders* gets no more
-  WhatsApp reminders or updates from your clinic on that number.
-
-### Recording consent at the desk
-
-The card and the tick below appear once TabeebHub switches WhatsApp messages
-on, so you may not see them yet.
-
-- **The patient's page has a WhatsApp messages card.** It lists each number
-  that reaches the patient at your clinic: their own, and each guardian's (an
-  animal's owner's), partly hidden. Each line says whether that person agreed,
-  turned messages off or has not been asked yet, and where the answer came
-  from, for example the desk, an online booking or the patient's own reply.
-- **Record consent** shows a short sentence to read to the patient. Tick that
-  the patient agreed, then press **Save consent**. **Turn off** is one click.
-- **The patient's own "off" wins.** If the patient turned messages off
-  themselves, by replying STOP, with the *Stop reminders* button or in their
-  TabeebHub patient account, the desk can't turn them back on. Only the
-  patient can.
-- **Add Patient has the same tick** once the form has a phone number, the
-  patient's own or a guardian's. It starts unticked, and the consent is
-  recorded for those numbers right after the patient is added.
-- **Consent is per clinic.** A patient who agreed at one clinic still needs to
-  agree at each other clinic, even another one of your own.
-
-### For the practice owner
-
-Once WhatsApp reminders are available for your clinic:
-
-- **Turn reminders on for each clinic** in Clinic Settings → Notifications.
-  Choose when the first reminder goes (24 hours before is recommended) and
-  whether to add a same-day one. The card also shows the number reminders ask
-  patients to call (the clinic needs a phone number first), how many of the
-  next 14 days' booked appointments can get a reminder and why the rest
-  can't, and a preview of the message in Arabic and English, with your
-  clinic's real name and phone. Only the clinic's owner can change these
-  settings.
-- **Switching reminders off** cancels the reminders already waiting to go
-  out. **Changing the timing** cancels the ones planned for the old time and
-  plans them again for the new one. The app says how many were cancelled.
-- **Free trial.** The first time you switch reminders on, your practice gets
-  30 free credits, valid for 30 days. This happens once.
-- **Credits.** Each reminder WhatsApp delivers uses one credit, and a
-  same-day reminder uses a second one. A reminder that is not delivered, or
-  not sent, costs nothing. There is one balance per practice owner, shared by
-  all your clinics.
-- **Money → WhatsApp reminders** (owner only) shows the balance: credits
-  available, credits held for reminders on their way, reminders waiting for
-  credits, the next credits to expire, and how many each clinic used this
-  month. Below it are the reminder settings for any of your clinics, every
-  reminder with what it cost and the patient's answer (filter by clinic,
-  status and dates), your credit batches and purchases, and how credits work.
-  Credits added by TabeebHub show as *Added by TabeebHub*.
-- **When the balance runs out,** new reminders wait. They go out as soon as
-  credits are added, if there is still time before the appointment. You are
-  told when the balance is low, when it runs out, about reminders that could
-  not go out the day before, and before credits expire.
-- **Buying credits,** when packs are on sale: press **Buy credits** on the
-  page, or **+ Buy more** on the WhatsApp reminders card under Plan usage on
-  Today. Pick a pack (prices include VAT, and each shows its price per
-  reminder) and pay by card or mobile wallet. The payment page opens in your
-  web browser. Pack credits are valid for 365 days. **Packs are
-  non-refundable, including unused credits,** and you tick a box to accept
-  this before paying. Only the practice owner can buy.
-- **On Today,** Plan usage has a WhatsApp reminders card with the credits
-  left, when the next ones expire and a *Low*, *Empty* or *Trial* badge. It
-  opens the WhatsApp reminders page.
-
-### Plan usage
-
-- **+ Buy more is always on the Appointments and Prescriptions cards** under
-  Plan usage on Today, not only when you are close to the limit. Unlimited
-  plans don't show it.
-
-### Fixed
-
-- **Clinic Settings → Notifications no longer shows four switches that did
-  nothing:** SMS and WhatsApp reminders, missed-visit follow-up and marketing
-  messages, all marked *Coming soon*, with two of them drawn as on. The
-  section is now WhatsApp appointment reminders, marked *Coming soon* until
-  they are available for your clinic.
-- On the Public page screen, **Preview** no longer shows the doctor's title
-  twice, as in *د. د.محمد*, when the name was typed with a title such as
-  *Dr/* or *د.*.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself. It downloads in the background and applies the next time you quit the
