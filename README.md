@@ -12,7 +12,7 @@ Official installer downloads for **TabeebHub**, clinic management software.
 
 **[⬇ Download TabeebHub for Windows](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-Setup.exe)**
 
-Windows 10 or Windows 11, 64-bit. About 96 MB.
+Windows 10 or Windows 11, 64-bit. About 97 MB.
 
 ### macOS
 
@@ -32,7 +32,169 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.16
+## What's new in 1.0.17
+
+This update brings the desktop app everything the web app gained since
+1.0.16: amending a completed visit, a calendar without cancelled
+appointments, and new tools for dental, eye, laser and OB/GYN clinics.
+
+### For every clinic
+
+- **Amend a completed visit.** On a paid plan with unlimited visits, the
+  clinic owner or the doctor who treated the visit can press **Amend visit**
+  on a completed visit until the end of the seventh clinic day after it. Add
+  findings, notes, an assessment or files: each is marked *Added after
+  completion* and listed under **Changes after completion**, and the
+  prescription and the bill don't change. The plans that include it now say
+  *Edit completed visits for 7 days*.
+- **Cancelled appointments leave the calendar.** In Month, Week and Day, a
+  cancelled appointment is no longer drawn, so its time looks free again and
+  the day's count and *+N more* leave it out. A no-show stays on the
+  calendar, so it can still be reinstated. The legend no longer lists
+  cancelled appointments, and when the calendar shows several doctors its
+  grey key now reads **Missed**.
+- **A pregnancy check before prescribing.** In **Clinical Alerts** on the
+  visit page, a pregnant patient never shows *All Clear*: a **Pregnant** card
+  reminds you to check every medicine for use in pregnancy. For a woman aged
+  12 to 55 with no pregnancy status on file, it asks **Could she be
+  pregnant?** *Ask before prescribing.*
+- **Consumables on a service.** In **Services**, a service can list its
+  **Consumables per visit** (gel or tips, for example). They come out of
+  stock once for each visit that uses the service, and are never billed.
+
+### Dental clinics
+
+- **Pulp Caries.** A new condition for decay that has reached the pulp, in
+  **Record Condition**, as a procedure's **Resulting status**, or as the
+  result when you mark a treatment done. **Caries** now colours the crown
+  only, while **Pulp Caries** colours the whole tooth and draws the pulp and
+  a thin line down each root, so it never looks like a root canal. A computer
+  or phone that hasn't updated yet shows it as **Caries**, and nothing is
+  lost.
+- **The chart reads the same in Arabic.** The Dental Chart keeps the order
+  dentists chart in, **18 … 11 | 21 … 28** over **48 … 41 | 31 … 38**, left
+  to right in both languages. The buttons, summary and legend around it still
+  read right to left.
+
+### Eye clinics
+
+- **A Glasses Rx tab.** At ophthalmology clinics, the visit page has a
+  **Glasses Rx** tab after Chief Complaint: SPH, CYL, AXIS and ADD for each
+  eye, prism (BI/BO and BU/BD), a balance lens, PD, lens type, use and lens
+  options. Type values the way you say them (−2.25, +1, or pl for Plano), or
+  step by 0.25 with ↑ and ↓, and **Copy the last prescription** starts from
+  the previous one.
+- **Checked before it goes out.** *Check before issuing* warns about things
+  like eyes more than 2.00 D apart or a bifocal lens with no ADD, and a wrong
+  value says the allowed range or *Did you mean −1.50?*. An assistant or a
+  doctor can **Save draft**; only a doctor can press **Issue to patient**,
+  and the patient then sees it in their app. A complete draft still waiting
+  when a doctor completes the visit is issued then.
+- **Correct, withdraw, print.** An issued prescription is never edited: a
+  doctor can **Correct** it, which issues a new version with a reason, or
+  **Withdraw** it. **Print** gives an A5 page for the optician, and the desk
+  prints it from the appointment page with **Print glasses Rx**.
+
+### Laser clinics
+
+For dermatology, cosmetic dermatology, aesthetic medicine and laser clinics.
+
+- **The laser record.** A **Laser** tab on the visit records the
+  **Operator**, the supervising doctor, skin type and consent, then each area
+  treated: status, device, settings, pulses, endpoint and reaction. Each area
+  starts from its last session, muted until you change it, and warnings (a
+  big jump in settings, a reaction last time, too soon since the last
+  session) never stop you. A clinic set up as a laser clinic opens every
+  visit on this tab.
+- **Prices per area or per pulse.** On **Procedures**, **Laser price list**
+  turns the areas you tick into priced procedures the desk books, billed per
+  area with no consultation fee. A procedure can also be charged **Per
+  pulse**, with a **Rate per pulse** and optional volume tiers.
+- **Pulse cards.** In **Services**, choose **By pulse** to set up a card of
+  pulses to sell, with gift pulses, how long it stays valid, a device type
+  and refund terms. On the visit, **Deduct pulses** takes the session's
+  pulses (a total, or the device counter's start and end) off the patient's
+  cards, and offers **Sell another card** or billing the rest per pulse when
+  they run short.
+- **Booking.** A laser booking is paid by its areas, a card or course, or
+  follows a paid session within 60 days at no charge, and the form says when
+  a card could cover the areas instead. On the Appointments list, **Card
+  nearly empty** marks the moment to offer a new one.
+- **Cards on the patient's profile.** The **Services** tab shows each card's
+  pulses left, expiry and history. The owner can **Extend** it or **Put on
+  hold**, and the owner or a doctor can **Settle** a card that has been
+  used, showing what was used, what the clinic keeps and the credit to the
+  patient. A **Laser** tab lists every session and each area's settings over
+  time.
+- **Devices and the register.** **Clinic settings → Laser devices** keeps
+  each device's type, serial number, starting counter and NILES certificate,
+  and **Laser register** lists every session in a date range, to print or
+  save as CSV. **Services** lists the clinic's pulse cards, soonest to expire
+  first, and **Financial policies** sets your **Pulse card refunds**. In
+  **Add Patient**, the owner can carry over a card bought before TabeebHub
+  with **A pulse card (custom)**.
+
+### OB/GYN clinics
+
+- **Reception fills it in, the doctor dates it.** When booking, reception
+  records what the patient reports (pregnancy status, last period and cycle
+  length), marked *As the patient reported — the doctor confirms the
+  dating.* Doctors and assistants see the gestational age and estimated due
+  date while she is pregnant; reception never sees the due date.
+- **Continue starts today fresh.** **Continue** on an OB/GYN assessment
+  brings the history and risks across, and today's complaint, findings,
+  diagnosis and plan start blank.
+- **A booking note for the doctor.** A note the patient leaves when booking
+  online is for the doctor; reception sees *The patient left a note — it's
+  for the doctor.*
+- **Teenagers' privacy.** From age 13, a guardian sees only the appointments
+  they booked here, as a date and the clinic. Under **Guardians** on the
+  patient's profile, a doctor can let a guardian see this clinic's visits,
+  prescriptions and files, and the app asks first.
+
+### Reception
+
+- **Invoices without the clinic's totals.** On **Invoices**, reception no
+  longer sees **Total billed** or **Collected**. The number of invoices,
+  **Outstanding** and each invoice's own amounts stay.
+- **One question at X-ray, lab and laser desks.** At radiology, laboratory,
+  dermatology, cosmetic dermatology, aesthetic medicine and laser clinics,
+  booking a woman asks **Could she be pregnant?** (**Yes**, **No** or **Not
+  sure**) in plain view. The answer is for the doctor and isn't shown at the
+  desk again.
+- **Women's-health questions only where they belong.** At other clinics
+  (not OB/GYN), reception no longer sees them. A patient with pregnancy or
+  period information on file can't have her sex changed from the desk; a
+  doctor who can see that record has to change it.
+
+### Clinic owners
+
+- **A first WhatsApp reminder on the day.** In **WhatsApp appointment
+  reminders**, the **First reminder** can now be **1**, **2** or **3 hours
+  before (on the day)**. It is the only reminder, so the same-day second
+  reminder is off. It's never sent within an hour of the booking, and one
+  that would fall at night goes at 09:00 if that's still at least 47 minutes
+  before the appointment; otherwise it isn't sent.
+- **Each clinic's own reminder number.** On **Money → WhatsApp reminders**,
+  when you own more than one clinic, the card names the clinic it's for
+  (*Reminders from* and the clinic's name, then the number) and remembers
+  your pick when you reload. **Change**, next to the number, opens where it's set:
+  Clinic settings, or your public page when that's the number used.
+
+### Also
+
+- An update never restarts the app while you're amending a visit.
+- On a completed visit, the **Growth** tab records measurements too.
+- The QR code on a printed prescription is now drawn by the app itself,
+  instead of by an outside service.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.16
 
 This update brings the desktop app the WhatsApp changes the web app gained
 since 1.0.15: a patient who says no at the desk is remembered, and the
@@ -293,94 +455,6 @@ Maps**, and can **Remove** it.
   extras**.
 - Announcements can be written in English, Arabic or both, with a live
   preview.
-
-> **Nothing to download.** If you are on 1.0.5 or later, this update installs
-> itself. It downloads in the background and applies the next time you quit the
-> app. The download links at the top of this page have not changed.
-
----
-
-## Previously, in 1.0.13
-
-This update brings the desktop app the new features and fixes the web app
-gained since 1.0.12. Most of it is about one thing: not booking the same
-patient twice by mistake.
-
-### The same patient booked twice
-
-Until now, the app stopped a second booking only when it was for the same
-patient, at the same clinic, at exactly the same time. Now it also tells you
-when a new time clashes with a booking the patient already has, before
-anything is saved.
-
-- **New appointment.** If the patient already has an appointment at that
-  time, the review step (*Review charges*) says so, for example *Ahmed Ali
-  already has an appointment at this time*, with that booking's day, time,
-  visit type, doctor and status. **Go back** to change the time, or press
-  **Book anyway** (or **Book anyway & collect**). Nothing is booked until you
-  choose.
-- **The very same booking is still refused:** the same clinic and start time,
-  or a second booking with no fixed time on the same day. There is no *Book
-  anyway* then: press **Open appointment** to go to the one that exists, or
-  **Go back**.
-- **Walk-ins.** Adding a walk-in for a patient who is already in today's
-  queue, or who has an appointment here today that hasn't been checked in,
-  asks first too. When they have a booking here today, **Check in the 9:00 AM
-  appointment instead** checks that booking in rather than adding a second
-  one.
-- **Reschedule, reinstate and accept.** Moving an appointment with
-  **Reschedule**, bringing back a no-show with **Reinstate appointment**, and
-  accepting a request on **Online requests** ask the same question, with
-  **Move anyway**, **Reinstate anyway** or **Accept anyway**.
-- **Book a series.** Each date that clashes is marked, for example *Already
-  booked 9:00 PM*, and is skipped unless you tick its **Book anyway** box.
-  In a series, any other booking the patient has that day at the same clinic
-  counts as a clash. A date already booked at exactly that time is always
-  skipped.
-- **Next visit.** When you book the next visit while completing a visit, a
-  note shows if the patient is already booked then. It never stops you
-  completing the visit.
-- **Two quiet lines on the review step** that never stop you, for a patient
-  already on your list: their other bookings that day (*Also booked that day:
-  9:00 PM · Examination*) and how many other patients are booked at that time
-  (*2 other bookings at this time*). You can still book several patients at
-  the same time.
-- **What counts.** Only the same patient: brothers and sisters sharing a
-  phone, or two animals of one owner, never clash. Finished, cancelled and
-  no-show appointments don't count, and back-to-back appointments don't
-  overlap. A booking with no end time counts as 30 minutes. A request the
-  patient sent online that is still waiting for your reply counts too. A
-  clash at another of your clinics is marked with that clinic's name, such as
-  *at Dokki*.
-
-### Online booking
-
-- **Your buffer is kept around every booking.** The *Buffer between slots* in
-  Clinic setup → Online booking settings now keeps time free before and after
-  every booking, including bookings made at the desk, so your public page may
-  offer a few fewer times on busy days. **What patients see**, on the same
-  page, now says so under the times, and it updates by itself when a booking
-  is made, moved or cancelled.
-- **One time, one patient.** When two patients try to book the same last
-  place at the same moment, only one of them gets it. A patient also can't
-  book online at a time that overlaps an appointment they already have at one
-  of your clinics.
-
-### Fixed
-
-- **The WhatsApp reminders card no longer loads forever.** Once WhatsApp
-  reminders are available for your clinic, if the card in Clinic Settings →
-  Notifications or on Money → WhatsApp reminders can't load its settings, it
-  now says what went wrong and offers **Try again**, instead of a spinner that
-  never stops.
-- **The Share menu on the Invoices page opens on top.** It used to open under
-  the rows below it, so it looked as if nothing had happened. It now opens
-  over the page, and above the button when there is no room below.
-
-### Coming soon
-
-- **Google Calendar sync** is being tried with a small group of doctors
-  first. We'll let you know when it is available to everyone.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself. It downloads in the background and applies the next time you quit the
