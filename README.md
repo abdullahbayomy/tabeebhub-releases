@@ -18,11 +18,11 @@ Windows 10 or Windows 11, 64-bit. About 97 MB.
 
 **[⬇ Download TabeebHub for Mac — Apple Silicon](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-arm64.dmg)**
 
-For Macs with an M1, M2, M3 or M4 chip. About 122 MB.
+For Macs with an M1, M2, M3 or M4 chip. About 123 MB.
 
 **[⬇ Download TabeebHub for Mac — Intel](https://github.com/abdullahbayomy/tabeebhub-releases/releases/latest/download/TabeebHub-x64.dmg)**
 
-For older Macs with an Intel processor. About 128 MB.
+For older Macs with an Intel processor. About 129 MB.
 
 > **Not sure which Mac you have?** Click the  menu in the top-left corner of your
 > screen and choose **About This Mac**. If it says *Apple M1/M2/M3/M4*, choose Apple
@@ -32,7 +32,256 @@ These links always serve the newest version — they do not change when we relea
 
 ---
 
-## What's new in 1.0.17
+## What's new in 1.0.18
+
+This update brings a calendar that keeps busy days readable, a new structured
+Cardiology Chief Complaint, and a clearer "today" for clinics whose day starts
+after midnight. Continue, vitals and prescribing alerts are more careful about
+what they claim, and a patient account can now join a clinic's staff.
+
+### For every clinic
+
+- **Busy days on the calendar.** In **Day** and **Week**, short appointments
+  back to back no longer pile up on top of each other. A busy stretch of the
+  day grows taller so each appointment is tall enough to show its name, in
+  time order, and quiet hours keep their usual height. Appointments at the
+  very same time still sit side by side. An hour that grew shows extra *:30*
+  (or *:15* and *:45*) marks with their own lines, and a click on a line
+  books that time. When a booking, a move or a cancellation, here or at
+  another desk, makes a busy stretch grow or shrink, the part of the day you
+  were reading stays where it was. In a narrow column, the patient's name
+  gets the space instead of the start time.
+- **"Today" when your clinic's day starts after midnight.** Some clinics count
+  their day from a later hour. If yours starts at 12:00 AM, nothing changes.
+  If it starts later:
+  - On **Appointments**, a row says *Today*, *Tomorrow* or *Yesterday* only
+    when the clinic's day and the calendar agree; otherwise it shows the
+    date. So a booking for tomorrow evening no longer says "Today" under
+    **Upcoming**.
+  - The **Today** board shows the date it is counting, and until the
+    clinic's day changes it says so: *The clinic's day changes at 3:00 PM —
+    until then, Today is Sunday.*
+  - Where the board shows **Collected Today**, it says which day it counts
+    (*Sunday · until 3:00 PM*). An owner looking at all their clinics sees,
+    under **Collected today**, a note when a clinic is still counting its
+    previous day. Both refresh on their own when the clinic's day changes.
+  - The calendar opens on today's date, and its **Today** button goes there,
+    even before the clinic's day has changed. A booking you make appears
+    straight away under Today or Upcoming by the clinic's day.
+- **The series calendar marks today.** In **Book a series of appointments**,
+  the calendar now rings today's date, not yesterday's.
+- **Continue starts today fresh.** When you press **Continue** on an
+  earlier assessment in **Chief Complaint**, the new note now leaves behind
+  what belonged to the last visit (on most forms the complaint, the
+  examination and the findings) and brings across what belongs to the
+  patient, such as the history and, on many forms, the diagnosis. So last
+  visit's examination no longer comes across as today's. The specialty
+  sections below say what changed. On forms where the complaint is a typed
+  box, it starts blank, and the note can't be saved until you type today's.
+  Computers and phones that haven't updated yet follow the same rules.
+- **Continue says what it carried.** The message after **Continue** names
+  only what really came across: *Carried forward — only “Course” and
+  “Working Diagnosis” came across; the rest of the note starts blank*. When
+  more came across, it says so and asks you to *check each one is still true
+  today*. When the complaint needs typing, it adds *Type today's complaint to
+  save the note.*
+- **A 0–10 scale can be cleared.** An unanswered severity, pain or itch scale
+  is drawn faded, showing "—". The first click records the value, including
+  0 (a click on 0 used to record nothing), and **Clear** takes the answer
+  away.
+- **Only this visit's vitals count as today's.** On the visit page,
+  **Vitals** shows a reading taken at this visit with its time. A reading
+  from an earlier visit is shown faded with *Last:* and its date. It is never
+  copied into today's boxes, and the Chief Complaint forms don't take it as
+  today's either. When you edit, a box starts empty unless the reading was
+  taken at this visit, so type today's value if you measured it. When BMI
+  uses today's weight with an earlier height, it says so (*Height from* and
+  the date).
+- **Weight and height at the desk.** On the appointment page, **Medical
+  information** opens weight and height empty unless they were measured for
+  this appointment. Doctors and assistants see the earlier value inside the
+  empty box as a hint (*Last:* with the value and date). Saving only a
+  weight no longer copies the last visit's blood pressure, oxygen, glucose
+  or breathing rate into today's reading.
+- **No false *All Clear*.** The allergy check can only check against a list
+  somebody recorded, so **Clinical Alerts** on the visit page no longer shows
+  a green *All Clear*. When the patient has no allergy list on file, doctors
+  and assistants see **Allergies not recorded**: *No allergy list on file, so
+  this prescription was not checked against one. Ask the patient before
+  prescribing.* A recorded list shows in its allergy card, as before.
+- **Trying to conceive.** For a woman recorded as trying to conceive, doctors
+  and assistants see **Recorded as trying to conceive** in **Clinical
+  Alerts**: *Ask before prescribing teratogenic medicines — the safety checks
+  here don't cover pregnancy.*
+- **The prescription page says what it checked.** The **Safety** tab says
+  *No interaction, dosage or duplicate issues* instead of "passes all safety
+  checks", and reminds you that allergies and pregnancy aren't checked on
+  that page. For doctors and assistants, the patient card no longer says *No
+  known allergies* or *No chronic conditions* about lists it doesn't load.
+  Instead it says *Not shown on this page — check the patient's record
+  before prescribing.*
+- **The diagnosis on the PDF.** The prescription PDF (**Download PDF**, and
+  the PDF behind a shared link) now prints the diagnosis written on the
+  prescription.
+
+### Cardiology clinics
+
+For cardiology and cardiothoracic surgery clinics.
+
+- **A structured cardiology consultation.** The **Chief Complaint** form
+  replaces the old form's free-text boxes with a guided consultation:
+  **Visit** (visit type and the patient's own words), **Since last visit**,
+  **Anticoagulation (warfarin)** with today's INR, symptom cards (**Chest
+  pain**, **Breathlessness**, **Palpitations**, **Fainting**, **Swelling and
+  fluid**, **Leg pain on walking**, **Stroke-like symptoms**, **Cough and
+  fever**), a **Background** that carries from visit to visit, **Today's
+  vitals**, an **Examination** with a murmur table (**Add murmur**), **ECG**,
+  **Echo**, **Tests and labs**, **Assessment** and **Plan**. A note for a
+  follow-up booking starts with the visit type set to **Follow-up**.
+- **Continue first.** When the patient has an earlier Cardiology note, the
+  form offers **Continue from** its date, or **Start blank**. Continue brings
+  the history, medicines and conditions; today's symptoms, findings and plan
+  start blank. On a return visit, the summary lists the medicines as
+  *Cardiac medicines (carried, not reviewed today)* until you record today's
+  decision on them.
+- **A summary that leads with the decision.** The summary reads Assessment
+  and Plan first, then the story, background, examination and tests. When
+  today's findings add something the Background doesn't hold yet, it opens
+  with *Add to Background:*. Today's diagnosis is what you assessed today,
+  and a condition carried from before that wasn't reviewed is listed as
+  *Known, not reviewed today*. If LVEF, a valve's severity, the rhythm or the
+  INR wasn't recorded today, it shows the *Last known* value with its date.
+  Where the note holds what they need, CHA₂DS₂-VA, HAS-BLED, RCRI (before an
+  operation), eGFR and whether the LDL is at goal are worked out and printed
+  under *Calculated*. A long summary folds, with **Show all**.
+- **Warnings that ask for a decision.** Some warning signs call for a
+  referral and some can be handled in clinic. While an emergency warning has
+  no referral decision, the form adds *Emergency warning with no referral
+  decision — record ER, admission, urgent referral or “declined” in Plan*.
+  **Disposition** in Plan records the decision, from **Acted on in clinic
+  today** to **Urgent same-day referral**, **Send to ER now**, **Admit** or
+  **Declined the advised referral**. If warnings are still waiting for a
+  decision when you press **Mark Complete**, the app lists them under
+  **Warning signs still raised** and offers **Go to Plan** or **Complete
+  anyway**.
+- **Numbers you can trust.** Number boxes accept Arabic digits and "1,250".
+  An impossible value is marked *Outside the possible range* and the note
+  can't be completed until it's fixed; an unusual one is marked so you can
+  check it.
+- **Unsaved answers are kept.** Switching tabs on the visit keeps what you
+  typed, and closing the form with unsaved answers asks **Leave without
+  saving?** (**Keep editing** or **Discard changes**).
+- **Today's vitals, read-only.** **Today's vitals** shows the readings from
+  the visit's vitals panel (edit them there), and says the day when a
+  reading isn't today's.
+- **Older notes.** A note written in the old form still opens with all its
+  answers. Its old free-text examination boxes are kept, marked *No longer
+  asked*, and the summary prints them as *Earlier exam notes*.
+- **Update every computer.** A computer that hasn't updated to 1.0.18 can't
+  save a Cardiology note. It asks to be updated first, so nothing written in
+  the new form is overwritten.
+
+### Psychiatry and psychology clinics
+
+- **The booking note is for the doctor.** A note the patient leaves when
+  booking online is now for the doctor, as at OB/GYN clinics. Reception sees
+  *The patient left a note — it's for the doctor.*
+- **Continue** brings across only the **Working Diagnosis**. The **Risk
+  Assessment** and today's complaint start blank.
+
+### Neurosurgery clinics
+
+- **Continue** now leaves the headache pattern behind, and a warning can't
+  light from carried answers alone.
+- **Spine and cancer.** With a cancer history, the warning for spine or cord
+  symptoms now needs a neurological symptom or sign answered today: a red
+  flag or myelopathy symptom ticked, a deficit on today's examination, or
+  sciatica, arm pain, claudication, weakness, leg numbness or an unsteady
+  walk with today's spine questions answered. Spinal pain with a cancer
+  history and no such sign adds a line to the summary instead: *cancer
+  history with spinal pain: MRI within a week (NICE NG234)*.
+
+### Other specialties
+
+What **Continue** brings across, and what else changed:
+
+- **General and family medicine, and every specialty without its own
+  form:** **Past Medical History**, **Current Medications**, **Allergies**
+  and the **Working Diagnosis**. The **Allergies** box now says the
+  prescription allergy check reads the patient's profile, not this box, and
+  **Objective / Examination** and **Plan** open unfolded.
+- **Internal medicine and the specialties that use its form:**
+  **Comorbidities** and the **Working Diagnosis**. **Systems Review
+  (positive)** gains **No other symptoms**, and **Examination** opens
+  unfolded.
+- **Eye clinics:** the **Affected Eye**, the **Working Diagnosis** and the
+  **Management Plan** (so the drops written there carry over).
+  **Examination** opens unfolded.
+- **Dermatology, cosmetic, aesthetic, laser and hair transplant clinics:**
+  the **Course** and the **Working Diagnosis**.
+- **ENT clinics:** the **Symptoms** and the **Side**.
+- **Dental clinics:** the **Tooth Number(s)**.
+- **Orthopaedic clinics:** the region and the complaint you picked still
+  come across, but **Cast / splint check** and **For how long** now start
+  blank.
+- **Physiotherapy and sports medicine:** the problem, its history, the
+  diagnosis, goals and the plan of care. Findings, the pain score, red flags
+  and the session note start blank. **Session Note (Quick Format)** moves up
+  to second place and opens unfolded, **Occupation** and **Referring
+  Physician** are back, and **Red Flags** opens unfolded and gains **None
+  (screened)**.
+- **Pediatric clinics:** Continue now asks again for the plan, the follow-up
+  and the milestones. On the growth chart, a weight or height that was only
+  sent again, not measured again, is no longer plotted as a new point.
+- **Veterinary clinics:** only the **Working diagnosis**. A follow-up now
+  asks **Since the last visit** (**Resolved**, **Improving**, **About the
+  same** or **Getting worse**), and **Examination** and **Plan** open
+  unfolded.
+
+### Clinic owners
+
+- **Hire someone who has a patient account.** In **Staff → Invite Staff**,
+  the number of an existing patient account is no longer refused. You can
+  invite them as a doctor, an assistant or a receptionist. The form says *An
+  existing TabeebHub patient account — they'll be asked to accept and keep
+  their patient records.* Their name stays hidden (the pending list and the
+  staff history show the number you typed) until they accept. Someone who
+  already holds a staff role can still join only as that role, and the form
+  says which one.
+- **What they see.** The invitation appears on their patient home, and its
+  notification opens it there. The card explains that accepting makes the
+  account clinic staff too and keeps their patient records. **Accept** sends
+  a code to their WhatsApp. They enter it, press **Confirm and join**, and
+  the clinic opens. One login keeps both their patient records and their
+  clinic work, and the menu switches between them, whichever way they signed
+  in. On **Enable Patient Access**, the way back now reads **Continue as
+  clinic staff** instead of "Continue as Doctor".
+- **The day-start setting explains itself.** In **Clinic settings →
+  Operational day**, the hour is now called **The clinic's day changes at**.
+  The setting says it is not your opening time and what it does to Today,
+  the board and Collected today. It warns when your clinic closes well
+  before midnight, or when the hour falls inside your working hours and
+  would split a session across two days.
+
+### Also
+
+- **Unsaved work asks before closing.** With unsaved changes on a visit (in
+  the Glasses Rx, Laser or Cardiology forms, for example), closing the
+  window, quitting or reloading now asks *You have unsaved changes* with
+  **Leave** or **Stay**. Before, the app just stayed open and didn't say
+  why.
+- A receptionist who is also a patient now sees their own prescriptions in
+  full, instructions and notes included.
+- In Arabic, a phone number in the staff history keeps its "+" in the right
+  place.
+
+> **Nothing to download.** If you are on 1.0.5 or later, this update installs
+> itself. It downloads in the background and applies the next time you quit the
+> app. The download links at the top of this page have not changed.
+
+---
+
+## Previously, in 1.0.17
 
 This update brings the desktop app everything the web app gained since
 1.0.16: amending a completed visit, a calendar without cancelled
@@ -326,135 +575,6 @@ notes it.
   when it isn't synced yet), **Turn the welcome on** / **Stop the welcome**
   (each asks for a reason), and **Send a test to my WhatsApp**, which sends
   it to your own phone once Meta has approved that language.
-
-> **Nothing to download.** If you are on 1.0.5 or later, this update installs
-> itself. It downloads in the background and applies the next time you quit the
-> app. The download links at the top of this page have not changed.
-
----
-
-## Previously, in 1.0.14
-
-This update brings the desktop app the new features and fixes the web app
-gained since 1.0.13: root canal records in the Dental Chart, a 12-hour or
-24-hour choice for the times your patients see, and a simpler billing page.
-
-### Root canal records in the Dental Chart
-
-A tooth with a root canal treatment in progress now has a root canal card
-where you record each canal, instead of a free-text note.
-
-- **Record canals.** The card lists the usual canals for that tooth, grouped
-  under their root, and suggests the one that is often missed (such as a
-  second MB canal) without ever assuming it. Type the working length of each
-  canal one after another, and the final file size as *25/.06* or *F2*
-  (**Same for all** gives every canal the same size). **+ Add canal** adds
-  one more.
-- **Two short dialogs.** **Dress & seal…** records the dressing and the
-  temporary for a treatment that continues. **Fill canals…** records the
-  technique, sealer and cones on the last visit, then **Fill & mark done
-  (chart: Root canal)** or **Fill only**.
-- **Every visit picks up where the last one stopped.** The next visit opens
-  on the last values, with a *Visit log* that shows one line per visit and
-  only what changed. The chart marks a tooth with a root canal in progress
-  with an **RCT** tag.
-- **Retreatment and children.** A tooth that already had a root canal opens
-  as a **Retreatment**, with the previous filling and the old lengths beside
-  the new ones. Baby teeth get a **Pulpectomy** card.
-- **Mistakes are easy to undo.** A root canal marked done by accident is
-  reopened with **Undo done to change it** in the message that appears, or
-  **Undo done** in the tooth's history. You can still record on a completed
-  visit until the end of that clinic day.
-- **Saving.** Changes are saved when you leave the tooth or the tab, or when
-  you complete the visit. If someone else saved the same tooth first, their
-  changes are kept and you are asked only about the fields you both changed.
-
-**Print a root canal record.** **Print record**, on the root canal card and on
-each record in the tooth's history, opens a one-page sheet, *Root canal record
-— tooth 36*, for referrals and the patient's file. It has your clinic's
-letterhead, the patient, the tooth, the treatment, the doctor and dates, a
-table of the final canals (length, file size, cone, state and any
-complication) and the visit log. Press **Print**.
-
-**Finished treatments keep their last note.** A treatment marked done or
-stopped used to lose its *Next* note from the tooth's history. The history now
-shows it as *Last note: …* under the result, on the visit's chart and on the
-patient profile.
-
-### 12-hour or 24-hour times for your patients
-
-**Online booking settings** and **Online consultation settings** each have a
-new choice, **Time format for patients**: **12-hour** or **24-hour**. It
-changes only how times are written for patients: the times they pick from
-when booking, their booking and consultation pages, and their appointment
-pages for online bookings and consultations. Your hours, available times and bookings stay exactly the same.
-Every clinic starts on 24-hour, as before, until you change it.
-
-### Plans and billing
-
-- **New plans:** **Free**, **1 Clinic**, **3 Clinics** and **9 Clinics**. Paid
-  plans give unlimited visits, and prescriptions are unlimited on every plan,
-  Free included. Some plans let you add extra clinics or extra staff members
-  on top.
-- **The billing page leads with *Your plan*:** your plan, what your next
-  renewal costs line by line, the dates, and how much of each limit you use.
-  **Renew**, **Change plan** and **Upgrade** are right there.
-- **Buy one more clinic or staff seat.** When you reach your clinic or staff
-  limit, on **My clinics**, **Staff**, the limit message or the billing page,
-  you can add one more to the plan you have, if your plan offers extras, next
-  to the cheapest upgrade.
-  You pay now only for the days left in your current period; after that it is
-  part of your renewal. Close to your renewal date, you get **Renew with 1 more
-  staff member** (or clinic) instead. Only the clinic owner can buy; staff see
-  *Ask the clinic owner to add a seat*.
-- **"All in use" instead of a red "Full".** Using every clinic or staff seat
-  your plan includes is normal, so it now reads **All in use**, in a calm
-  colour. It turns red only when you are over a limit.
-- **The Free plan now includes 2 staff members** (you, the owner, don't
-  count). If you already have more on Free, nobody loses access.
-
-### Your clinic's location
-
-Clinic settings, clinic setup and **Create clinic** now have a **Where
-patients find you** card, with your city, governorate and a **Location on
-the map** section. Patients on your public
-page get directions to your exact map pin once you have confirmed it, or to
-your written address when there is no pin. In this version of the desktop
-app, the pin itself is set on tabeeb-hub.com or in the TabeebHub phone app;
-the desktop app shows the pin you set there, opens it with **Open in Google
-Maps**, and can **Remove** it.
-
-### Smaller changes
-
-- **Credential documents each have their own place.** When you send your
-  documents for verification, each one (for example a licence and a degree)
-  has its own slot under *Your documents*. Files already sent stay attached,
-  and **Replace** changes only that one.
-- **Announcements in your language.** TabeebHub announcements are shown in
-  English or Arabic, matching your app's language when both are written,
-  with phone numbers written and linked correctly.
-- **Attachments: up to 10 MB each, judged after the photo is shrunk.** A large
-  photo is made smaller first, so most camera photos still upload. A PDF or
-  photo that is still over 10 MB gets a clear *too large* message.
-
-### Also
-
-- The sign-up page now scrolls in the desktop app, so the **Create** button
-  is always reachable. Its last step is shorter, with **Edit** to change your
-  account details.
-- A sharper TabeebHub app icon (the same design, redrawn), and a purple
-  loading spinner while the app starts.
-- Image attachments can be opened with **Open full size**.
-
-### For TabeebHub admins
-
-- **Admin → Payments** lists every payment made into TabeebHub, including
-  **Declined** ones.
-- **Admin → Subscriptions** sorts by closest to the limit, marks accounts
-  with a **Near limit (80%+)** chip, and has **Move to Free** and **Set
-  extras**.
-- Announcements can be written in English, Arabic or both, with a live
-  preview.
 
 > **Nothing to download.** If you are on 1.0.5 or later, this update installs
 > itself. It downloads in the background and applies the next time you quit the
